@@ -52,19 +52,20 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // serialPort1
@@ -150,9 +151,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(13, 254);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 275);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(348, 198);
+            this.pictureBox1.Size = new System.Drawing.Size(348, 177);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -180,7 +181,7 @@
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Size = new System.Drawing.Size(169, 45);
             this.trackBar3.TabIndex = 10;
-            this.trackBar3.Value = 1000;
+            this.trackBar3.Value = 9999;
             this.trackBar3.Scroll += new System.EventHandler(this.trackBar3_Scroll);
             // 
             // trackBar4
@@ -188,11 +189,9 @@
             this.trackBar4.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSource4, "Value", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.trackBar4.Location = new System.Drawing.Point(191, 203);
             this.trackBar4.Maximum = 9999;
-            this.trackBar4.Minimum = 1;
             this.trackBar4.Name = "trackBar4";
             this.trackBar4.Size = new System.Drawing.Size(169, 45);
             this.trackBar4.TabIndex = 11;
-            this.trackBar4.Value = 1000;
             this.trackBar4.Scroll += new System.EventHandler(this.trackBar4_Scroll);
             // 
             // label4
@@ -264,6 +263,24 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "Gain";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(197, 240);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 23);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Update Gain";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // bindingSource4
+            // 
+            this.bindingSource4.DataSource = typeof(ControlTest01.Data);
+            // 
+            // bindingSource3
+            // 
+            this.bindingSource3.DataSource = typeof(ControlTest01.Data);
+            // 
             // bindingSource2
             // 
             this.bindingSource2.DataSource = typeof(ControlTest01.Data);
@@ -272,19 +289,12 @@
             // 
             this.bindingSource1.DataSource = typeof(ControlTest01.Data);
             // 
-            // bindingSource3
-            // 
-            this.bindingSource3.DataSource = typeof(ControlTest01.Data);
-            // 
-            // bindingSource4
-            // 
-            this.bindingSource4.DataSource = typeof(ControlTest01.Data);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 474);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -312,10 +322,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,6 +360,7 @@
         private System.Windows.Forms.BindingSource bindingSource2;
         private System.Windows.Forms.BindingSource bindingSource3;
         private System.Windows.Forms.BindingSource bindingSource4;
+        private System.Windows.Forms.Button button1;
     }
 }
 

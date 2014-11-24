@@ -31,10 +31,10 @@ namespace ControlTest01
             d.Value = 20;
             this.bindingSource2.DataSource = d; ;
             d = new ControlTest01.Data();
-            d.Value = 1000;
+            d.Value = 9999;
             this.bindingSource3.DataSource = d; ;
             d = new ControlTest01.Data();
-            d.Value = 1000;
+            d.Value = 0;
             this.bindingSource4.DataSource = d; ;
 
             dataPoints = new int[NUM_DATA];
@@ -190,6 +190,33 @@ namespace ControlTest01
         private void trackBar4_Scroll(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            write("$kp" + trackBar2.Value.ToString("D4") + "#");
+            string retVal = read();
+            if (!retVal.Equals("kp"))
+            {
+                MessageBox.Show("FAILED: " + retVal);
+                serialPort1.DiscardInBuffer();
+            }
+
+            write("$ti" + trackBar3.Value.ToString("D4") + "#");
+            retVal = read();
+            if (!retVal.Equals("ti"))
+            {
+                MessageBox.Show("FAILED: " + retVal);
+                serialPort1.DiscardInBuffer();
+            }
+
+            write("$td" + trackBar4.Value.ToString("D4") + "#");
+            retVal = read();
+            if (!retVal.Equals("td"))
+            {
+                MessageBox.Show("FAILED: " + retVal);
+                serialPort1.DiscardInBuffer();
+            }
         }
     }
 
